@@ -9,8 +9,8 @@ public class BaseDriver {
 
     public static WebDriver driver;
 
-    public static WebDriver getDriver(){
-        if(driver==null) {
+    public static WebDriver getDriver() {
+        if (driver == null) {
 
 
             driver = new ChromeDriver();
@@ -23,8 +23,11 @@ public class BaseDriver {
         return driver;
     }
 
-    public static void  quitDriver(){
-        driver.quit();
-        driver=null;
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
+
     }
 }
