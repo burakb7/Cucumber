@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContent extends MyMethods {
 
     public DialogContent(){
@@ -93,6 +95,8 @@ public class DialogContent extends MyMethods {
     @FindBy(css = "iframe[class=\"tox-edit-area__iframe\"]")
     public WebElement iFrame;
 
+    @FindBy(xpath = "//tbody[@role='rowgroup']//td[2]")
+    public List<WebElement> statesList;
 
 
 

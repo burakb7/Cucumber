@@ -30,4 +30,10 @@ public class BaseDriver {
         }
 
     }
+
+    public static boolean runningFromIntellij(){
+
+        String classpath = System.getProperty("java.class.path");
+        return classpath.contains("idea_rt.jar");
+    }
 }
